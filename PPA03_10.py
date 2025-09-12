@@ -10,7 +10,8 @@ for i in range(1,n) :
     d = 2                           # initalised divisor d to 2
     while prime and d < i+1:        # loops while number is prime and divisor d is less than n
         if (i+1)%d == 0 :           # checks if n is completely divisible by d
-            prime = not(prime)      # if so, number is not prime
+            prime = not(prime)
+            break      # if so, number is not prime
         d = d+1                     # increments divisor by +1
 
     if prime:                       # checks condition if n is prime = True
