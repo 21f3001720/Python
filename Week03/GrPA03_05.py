@@ -10,3 +10,21 @@ For example, the number 9888888765 is invalid because the digit 8 appears more t
 
 Print the string 'valid' if the phone number is valid. If not, print the string 'invalid'.
 """
+phone = str(input())
+valid = True
+
+if (len(phone) == 10) and (phone[0] in '6789'):
+    for i in range(0,5):
+        if phone.count(phone[i]) > 7 :
+            valid = False
+            break
+        if 6*phone[i] in phone :
+            valid = False
+else:
+    valid = False            
+
+
+if valid :
+    print("valid")
+else:
+    print("invalid")
